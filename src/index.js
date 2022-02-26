@@ -76,8 +76,10 @@ function getButton(kanji) {
 
 function swapUI() {
   const ime = document.getElementById("ime");
-  ime.parentNode.classList.toggle("order-sm-first");
+  ime.parentNode.classList.toggle("order-first");
   ime.classList.toggle("flex-row-reverse");
+  const suggest = document.getElementById("suggest");
+  suggest.classList.toggle("order-xs-first");
 }
 
 function updateSuggest(sortedPredict) {

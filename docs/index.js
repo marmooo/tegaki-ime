@@ -5,7 +5,7 @@ return imageData;}
 function initSignaturePad(){const canvas=document.getElementById("canvas");const pad=new SignaturePad(canvas,{minWidth:2,maxWidth:2,penColor:"black",backgroundColor:"white",minDistance:0,throttle:0,});pad.addEventListener("endStroke",()=>{predict(pad.canvas);});document.getElementById("eraser").onclick=()=>{pad.clear();};document.getElementById("editMinus").onclick=()=>{textarea.value=textarea.value.slice(0,-1);};return pad;}
 function predict(canvas){const imageData=getImageData(canvas);worker.postMessage(imageData);}
 function getButton(kanji){const button=document.createElement("button");button.textContent=kanji;button.className="btn btn-lg p-0 ms-2";button.onclick=()=>{tegakiPad.clear();textarea.value+=kanji;};return button;}
-function swapUI(){const ime=document.getElementById("ime");ime.parentNode.classList.toggle("order-sm-first");ime.classList.toggle("flex-row-reverse");}
+function swapUI(){const ime=document.getElementById("ime");ime.parentNode.classList.toggle("order-first");ime.classList.toggle("flex-row-reverse");const suggest=document.getElementById("suggest");suggest.classList.toggle("order-xs-first");}
 function updateSuggest(sortedPredict){const suggest=document.getElementById("suggest");while(suggest.firstChild){suggest.removeChild(suggest.lastChild);}
 let count=0;for(let i=0;i<sortedPredict.length;i++){const kanji=kanji4List[sortedPredict[i][0]];const button=getButton(kanji);suggest.appendChild(button);count+=1;if(count>=20){break;}}}
 function increaseText(){const textarea=document.getElementById("textarea");const fontSize=parseInt(getComputedStyle(textarea).fontSize)+1;textarea.style.fontSize=fontSize+"px";}

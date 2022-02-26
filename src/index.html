@@ -32,6 +32,9 @@
       @media (min-width: 576px) {
         #suggest { width:200px; }
       }
+      @media (max-width: 575.98px) {
+        .order-xs-first { order:-1!important; }
+      }
       canvas { width:150px; height:150px; border:1px solid #000; }
       html[data-theme="dark"] { filter: invert(1) hue-rotate(180deg); }
       @-moz-document url-prefix() { html[data-theme="dark"] { background-color:black; } }
@@ -84,7 +87,7 @@
             </div>
             <canvas id="canvas" width="150" height="150" class="mb-3"></canvas>
           </div>
-          <div id="suggest" class="ms-2"></div>
+          <div id="suggest"></div>
         </div>
       </div>
     </main>
