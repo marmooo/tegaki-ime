@@ -1,11 +1,11 @@
-var CACHE_NAME = "2022-05-11 09:49";
+var CACHE_NAME = "2022-05-14 10:20";
 var urlsToCache = [
   "/tegaki-ime/",
-  "/tegaki-ime/worker.js",
   "/tegaki-ime/index.js",
-  "/tegaki-ime/favicon/original.svg",
+  "/tegaki-ime/worker.js",
   "/tegaki-ime/model/model.json",
   "/tegaki-ime/model/group1-shard1of1.bin",
+  "/tegaki-ime/favicon/favicon.svg",
   "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js",
   "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",
   "https://cdn.jsdelivr.net/npm/signature_pad@4.0.4/dist/signature_pad.umd.min.js",
