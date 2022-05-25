@@ -111,7 +111,7 @@ function decreaseText() {
   textarea.style.fontSize = fontSize + "px";
 }
 
-const worker = new Worker("worker.js");
+const worker = new Worker(location.origin + location.pathname + "worker.js");
 worker.addEventListener("message", function (e) {
   updateSuggest(e.data);
 });
