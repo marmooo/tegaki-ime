@@ -1,4 +1,4 @@
-var CACHE_NAME = "2022-11-28 00:00";
+var CACHE_NAME = "2023-01-06 18:34";
 var urlsToCache = [
   "/tegaki-ime/",
   "/tegaki-ime/index.js",
@@ -9,7 +9,7 @@ var urlsToCache = [
   "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js",
   "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css",
   "https://cdn.jsdelivr.net/npm/signature_pad@4.1.4/dist/signature_pad.umd.min.js",
-  "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.1.0/dist/tf.min.js",
+  "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.2.0/dist/tf.min.js",
 ];
 
 self.addEventListener("install", function (event) {
