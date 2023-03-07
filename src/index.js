@@ -67,6 +67,7 @@ function getButton(kanji) {
   const button = document.createElement("button");
   button.textContent = kanji;
   button.className = "btn btn-lg p-0 ms-2";
+  button.type = "button";
   button.onclick = () => {
     tegakiPad.clear();
     textarea.value += kanji;
