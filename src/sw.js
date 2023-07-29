@@ -1,4 +1,4 @@
-var CACHE_NAME = "2023-07-23 08:38";
+var CACHE_NAME = "2023-07-29 10:17";
 var urlsToCache = [
   "/tegaki-ime/",
   "/tegaki-ime/index.js",
@@ -6,7 +6,7 @@ var urlsToCache = [
   "/tegaki-ime/model/model.json",
   "/tegaki-ime/model/group1-shard1of1.bin",
   "/tegaki-ime/favicon/favicon.svg",
-  "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js",
+  "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js",
   "https://cdn.jsdelivr.net/npm/signature_pad@4.1.6/dist/signature_pad.umd.min.js",
   "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.9.0/dist/tf.min.js",
 ];
