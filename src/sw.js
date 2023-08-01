@@ -1,5 +1,5 @@
-var CACHE_NAME = "2023-07-29 10:17";
-var urlsToCache = [
+const CACHE_NAME = "2023-08-02 07:40";
+const urlsToCache = [
   "/tegaki-ime/",
   "/tegaki-ime/index.js",
   "/tegaki-ime/worker.js",

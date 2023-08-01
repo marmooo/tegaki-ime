@@ -114,7 +114,7 @@ function decreaseText() {
 }
 
 const worker = new Worker(location.origin + location.pathname + "worker.js");
-worker.addEventListener("message", function (e) {
+worker.addEventListener("message", (e) => {
   updateSuggest(e.data);
 });
 const tegakiPad = initSignaturePad();
@@ -123,14 +123,3 @@ document.getElementById("toggleDarkMode").onclick = toggleDarkMode;
 document.getElementById("increaseText").onclick = increaseText;
 document.getElementById("decreaseText").onclick = decreaseText;
 document.getElementById("swap").onclick = swapUI;
-document.ondblclick = function (e) {
-  e.preventDefault();
-};
-
-// disable troublesome iOS features
-if (/Macintosh/.test(navigator.userAgent)) {
-  // double tap zoom
-  document.ondblclick = (e) => {
-    e.preventDefault();
-  };
-}

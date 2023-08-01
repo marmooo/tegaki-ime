@@ -3,15 +3,11 @@ const kanji4List = Array.from(
 );
 
 function getSortedPredict(accuracyScores) {
-  let index = new Array(kanji4List.length);
+  const index = new Array(kanji4List.length);
   kanji4List.forEach((_kanji, i) => {
     index[i] = [i, accuracyScores[i]];
   });
-  index.sort((a, b) => {
-    if (a[1] < b[1]) return 1;
-    if (a[1] > b[1]) return -1;
-    return 0;
-  });
+  index.sort((a, b) => b[1] - a[1]);
   return index;
 }
 
@@ -32,12 +28,16 @@ function predict(imageData) {
   return getSortedPredict(accuracyScores);
 }
 
-importScripts("https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.9.0/dist/tf.min.js");
+async function loadModel() {
+  model = await tf.loadGraphModel("model/model.json");
+}
+
+importScripts(
+  "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.9.0/dist/tf.min.js",
+);
 
 let model;
-(async () => {
-  model = await tf.loadGraphModel("model/model.json");
-})();
+loadModel();
 
 self.addEventListener("message", (e) => {
   const result = predict(e.data);
