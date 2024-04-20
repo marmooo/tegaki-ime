@@ -1,4 +1,4 @@
-const CACHE_NAME = "2024-04-14 00:50";
+const CACHE_NAME = "2024-04-20 10:31";
 const urlsToCache = [
   "/tegaki-ime/",
   "/tegaki-ime/index.js",
@@ -6,7 +6,7 @@ const urlsToCache = [
   "/tegaki-ime/model/model.json",
   "/tegaki-ime/model/group1-shard1of1.bin",
   "/tegaki-ime/favicon/favicon.svg",
-  "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.16.0/dist/tf.min.js",
+  "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.18.0/dist/tf.min.js",
 ];
 
 self.addEventListener("install", (event) => {
