@@ -73,7 +73,7 @@ function getButton(kanji) {
   button.className = "btn btn-lg p-0 ms-2";
   button.type = "button";
   button.onclick = () => {
-    tegakiPad.clear();
+    pad.clear();
     textarea.value += kanji;
   };
   return button;
@@ -117,12 +117,15 @@ function decreaseText() {
 }
 
 const worker = new Worker(location.origin + location.pathname + "worker.js");
-worker.addEventListener("message", (e) => {
-  updateSuggest(e.data);
+worker.addEventListener("message", (event) => {
+  updateSuggest(event.data);
 });
-const tegakiPad = initSignaturePad();
+const pad = initSignaturePad();
 
 document.getElementById("toggleDarkMode").onclick = toggleDarkMode;
 document.getElementById("increaseText").onclick = increaseText;
 document.getElementById("decreaseText").onclick = decreaseText;
 document.getElementById("swap").onclick = swapUI;
+document.addEventListener("pointerdown", () => {
+  predict(pad.canvas);
+}, { once: true });
