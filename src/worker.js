@@ -32,14 +32,15 @@ async function loadModel() {
   model = await tf.loadGraphModel("model/model.json");
 }
 
+async function loadModelAndPredict(event) {
+  if (!model) await loadModel();
+  const result = predict(event.data);
+  postMessage(result);
+}
+
 importScripts(
   "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.19.0/dist/tf.min.js",
 );
 
 let model;
-loadModel();
-
-self.addEventListener("message", (e) => {
-  const result = predict(e.data);
-  postMessage(result);
-});
+self.addEventListener("message", loadModelAndPredict);
