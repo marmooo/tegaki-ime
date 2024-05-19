@@ -1,4 +1,4 @@
-import signaturePad from "https://cdn.jsdelivr.net/npm/signature_pad@5.0.0/+esm";
+import signaturePad from "https://cdn.jsdelivr.net/npm/signature_pad@5.0.1/+esm";
 
 const textarea = document.getElementById("textarea");
 const kanji4List = Array.from(
