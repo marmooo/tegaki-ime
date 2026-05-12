@@ -6,22 +6,14 @@ const kanji4List = Array.from(
 );
 const canvasCache = document.createElement("canvas")
   .getContext("2d", { willReadFrequently: true });
-loadConfig();
-
-function loadConfig() {
-  if (localStorage.getItem("darkMode") == 1) {
-    document.documentElement.setAttribute("data-bs-theme", "dark");
-  }
-}
 
 function toggleDarkMode() {
-  if (localStorage.getItem("darkMode") == 1) {
-    localStorage.setItem("darkMode", 0);
-    document.documentElement.setAttribute("data-bs-theme", "light");
-  } else {
-    localStorage.setItem("darkMode", 1);
-    document.documentElement.setAttribute("data-bs-theme", "dark");
-  }
+  const html = document.documentElement;
+  const newTheme = html.getAttribute("data-bs-theme") === "dark"
+    ? "light"
+    : "dark";
+  html.setAttribute("data-bs-theme", newTheme);
+  localStorage.setItem("darkMode", newTheme);
 }
 
 function getImageData(drawElement) {
